@@ -544,8 +544,8 @@ body.lang-am .closing-subtext {
     /* Aligns exactly at the 55% flap tip */
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 135px;
-    height: 135px;
+    width: 155px;
+    height: 155px;
     z-index: 10;
     border-radius: 50%;
     overflow: hidden;
@@ -625,8 +625,8 @@ body.lang-am .closing-subtext {
     }
 
     #wax-seal {
-        width: min(130px, 32vmin);
-        height: min(130px, 32vmin);
+        width: min(150px, 38vmin);
+        height: min(150px, 38vmin);
     }
 }
 
@@ -1603,8 +1603,8 @@ body.lang-am .closing-subtext {
     }
 
     #wax-seal {
-        width: min(130px, 32vmin);
-        height: min(130px, 32vmin);
+        width: min(150px, 38vmin);
+        height: min(150px, 38vmin);
     }
 
     .open-hint {
@@ -2576,8 +2576,8 @@ body.lang-am .closing-subtext {
 
     /* ── Wax seal (subtle, elegant sizing) ── */
     #wax-seal {
-        width: min(125px, 30vmin);
-        height: min(125px, 30vmin);
+        width: min(145px, 36vmin);
+        height: min(145px, 36vmin);
         top: 55%;
     }
 
@@ -2833,8 +2833,8 @@ body.lang-am .closing-subtext {
     }
 
     #wax-seal {
-        width: min(115px, 28vmin);
-        height: min(115px, 28vmin);
+        width: min(140px, 34vmin);
+        height: min(140px, 34vmin);
         top: 55%;
     }
 
@@ -2847,8 +2847,8 @@ body.lang-am .closing-subtext {
 @media (max-height: 500px) and (orientation: landscape) {
     #wax-seal {
         top: 55%;
-        width: min(105px, 26vmin);
-        height: min(105px, 26vmin);
+        width: min(130px, 32vmin);
+        height: min(130px, 32vmin);
     }
 
     .couple-names {
@@ -2892,8 +2892,8 @@ body.lang-am .closing-subtext {
     }
 
     #wax-seal {
-        width: 135px;
-        height: 135px;
+        width: 155px;
+        height: 155px;
         top: 55%;
     }
 }
