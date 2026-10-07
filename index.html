@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation — Nahom &amp; Meklit</title>
+    <meta name="description"
+        content="You are joyfully invited to celebrate the wedding of Nahom & Meklit on October 18, 2026 at Sheraton Addis, Addis Ababa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Noto+Serif+Ethiopic:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Ambient Gold Dust Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- =====================================================
+         ENVELOPE OVERLAY — two panels that split open
+    ====================================================== -->
+    <div id="envelope-overlay">
+        <div id="env-top-wrapper">
+            <div id="env-top"></div>
+        </div>
+        <div id="env-bottom"></div>
+        <div id="wax-seal" title="Click to open">
+            <img src="wax1.png" alt="Wax Seal">
+        </div>
+    </div>
+
+    <!-- =====================================================
+         INVITATION CONTENT — one single continuous page
+    ====================================================== -->
+    <main id="invitation-main">
+        <div class="invitation-page" id="invitation-page">
+
+            <!-- =====================================================
+                 LANGUAGE SWITCHER (TOP RIGHT OF OPENED INVITATION)
+            ====================================================== -->
+            <div class="lang-switcher-container" id="lang-switcher">
+                <button class="lang-btn active" data-lang="en" aria-label="Switch to English" title="English">
+                    <span class="lang-text">ENG</span>
+                </button>
+                <button class="lang-btn" data-lang="am" aria-label="Switch to Amharic" title="አማርኛ">
+                    <span class="lang-text">AMH</span>
+                </button>
+            </div>
+
+            <!-- ── ENVELOPE DECORATIVE SECTION ────────────────── -->
+            <div class="inv-block envelope-section">
+                <div class="envelope-header">
+                    <p class="envelope-sub" data-i18n="envelope_sub">You're Invited to Celebrate The Wedding Of</p>
+                    <h1 class="envelope-title sage-text" data-i18n="groom_name">Nahom</h1>
+                    <h2 class="envelope-title sage-text">&amp; </h2>
+                    <h1 class="envelope-title sage-text" data-i18n="bride_name">Meklit</h1>
+                </div>
+                <div class="static-envelope-container">
+                    <img src="envlopedecor.png" class="static-envelope-img" alt="Envelope">
+                </div>
+            </div>
+
+            <!-- ── GOLD DIVIDER ───────────────────────── -->
+            <div class="gold-rule"><span></span><svg viewBox="0 0 32 32">
+                    <circle cx="16" cy="16" r="5" fill="#BF953F" />
+                </svg><span></span></div>
+            <p class="invitation-body" data-i18n="invitation_body">With grateful hearts and joyful spirits,
+                we warmly invite you to celebrate the beginning of our forever. Together with our families</p>
+
+            <!-- ── PICTURE 5 OVAL IMAGE SECTION ─────────────────── -->
+            <div class="inv-block picture5-section">
+                <div class="picture5-oval-wrapper">
+                    <img src="Picture5.jpg" class="picture5-oval-img" alt="picture">
+                </div>
+            </div>
+
+
+            <!-- ── HERO ───────────────────────────────── -->
+            <!-- ── HERO / SAVE THE DATE ───────────────────── -->
+            <div class="inv-hero">
+                <img src="flowerdivider.svg" class="botanical-ornament" alt="Flower Divider">
+
+                <div class="save-the-date-section">
+                    <h2 class="std-main-title sage-text" data-i18n="std_main_title">SAVE THE DATES</h2>
+                    <p class="std-main-desc" data-i18n="std_main_desc">Together with our families, we invite you to
+                        celebrate our marriage on
+                        <strong>October 18, 2026</strong> at International Evangelical Church, Addis Ababa.
+                    </p>
+
+                    <!-- Calendar Card -->
+                    <div class="calendar-card">
+                        <div class="cal-header-row">
+                            <span class="cal-month-name" data-i18n="cal_month">OCTOBER 2026</span>
+                        </div>
+                        <div class="calendar-grid">
+                            <span class="cal-head" data-i18n="cal_mo">Mo</span>
+                            <span class="cal-head" data-i18n="cal_tu">Tu</span>
+                            <span class="cal-head" data-i18n="cal_we">We</span>
+                            <span class="cal-head" data-i18n="cal_th">Th</span>
+                            <span class="cal-head" data-i18n="cal_fr">Fr</span>
+                            <span class="cal-head" data-i18n="cal_sa">Sa</span>
+                            <span class="cal-head" data-i18n="cal_su">Su</span>
+
+                            <!-- Week 1: Oct 1 is Thursday -->
+                            <span class="cal-num empty"></span>
+                            <span class="cal-num empty"></span>
+                            <span class="cal-num empty"></span>
+                            <span class="cal-num">1</span>
+                            <span class="cal-num">2</span>
+                            <span class="cal-num">3</span>
+                            <span class="cal-num">4</span>
+
+                            <!-- Week 2 -->
+                            <span class="cal-num">5</span>
+                            <span class="cal-num">6</span>
+                            <span class="cal-num">7</span>
+                            <span class="cal-num">8</span>
+                            <span class="cal-num">9</span>
+                            <span class="cal-num">10</span>
+                            <span class="cal-num">11</span>
+
+                            <!-- Week 3 -->
+                            <span class="cal-num">12</span>
+                            <span class="cal-num">13</span>
+                            <span class="cal-num">14</span>
+                            <span class="cal-num">15</span>
+                            <span class="cal-num">16</span>
+                            <span class="cal-num">17</span>
+                            <span class="cal-num cal-active"><span class="active-badge">18</span></span>
+
+                            <!-- Week 4 -->
+                            <span class="cal-num">19</span>
+                            <span class="cal-num">20</span>
+                            <span class="cal-num">21</span>
+                            <span class="cal-num">22</span>
+                            <span class="cal-num">23</span>
+                            <span class="cal-num">24</span>
+                            <span class="cal-num">25</span>
+
+                            <!-- Week 5 -->
+                            <span class="cal-num">26</span>
+                            <span class="cal-num">27</span>
+                            <span class="cal-num">28</span>
+                            <span class="cal-num">29</span>
+                            <span class="cal-num">30</span>
+                            <span class="cal-num">31</span>
+                            <span class="cal-num empty"></span>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="countdown-container" id="countdown">
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label" data-i18n="days">Days</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label" data-i18n="hours">Hrs</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label" data-i18n="minutes">Mins</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label" data-i18n="seconds">Secs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── FULL WIDTH BACK IMAGE SECTION ────────────────── -->
+            <div class="inv-block full-width-image-section">
+                <img src="Back.png" class="full-width-back-img" alt="Card Back">
+            </div>
+            <!-- ── DAY PROGRAM & VENUE CARD (IMAGE-INSPIRED ELEGANT SECTION) ────────────────── -->
+            <div class="inv-block program-card-wrapper">
+                <div class="program-card">
+
+                    <!-- ── TOP CREAM PANEL: PROGRAM OF THE DAY ── -->
+                    <div class="program-top-panel">
+                        <h2 class="program-main-title" data-i18n="program_title">Our Church Program of the Day</h2>
+
+                        <div class="program-timeline-container">
+                            <!-- Center vertical line with heart pin -->
+                            <div class="program-vertical-line">
+                                <span class="program-heart-pin">♥</span>
+                            </div>
+
+                            <div class="program-items">
+
+                                <!-- Item 1: Guest Gathering -->
+                                <div class="program-item">
+                                    <div class="program-icon-col">
+                                        <svg class="program-svg-icon" viewBox="0 0 64 64" fill="none"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                                d="M16 14l4 14c0 3 2 5 5 5s5-2 5-5l4-14H16zM25 33v13M19 46h12" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                                d="M36 14l4 14c0 3 2 5 5 5s5-2 5-5l4-14H36zM45 33v13M39 46h12" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+                                                d="M31 10c0-1.5 1.5-2.5 2.5-1 1-1.5 2.5-.5 2.5 1 0 2-2.5 3.5-2.5 3.5S31 12 31 10z"
+                                                fill="currentColor" fill-opacity="0.2" />
+                                            <circle cx="21" cy="10" r="1" fill="currentColor" />
+                                            <circle cx="49" cy="10" r="1" fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                    <div class="program-text-col">
+                                        <h3 class="program-event-title" data-i18n="p1_title">Guest Gathering</h3>
+                                        <span class="program-event-time" data-i18n="p1_time">10:30 AM</span>
+                                        <p class="program-event-desc" data-i18n="p1_desc">Welcome drinks &amp; joyful
+                                            reunions</p>
+                                    </div>
+                                </div>
+
+                                <!-- Item 2: Vow Ceremony -->
+                                <div class="program-item">
+                                    <div class="program-icon-col">
+                                        <svg class="program-svg-icon" viewBox="0 0 64 64" fill="none"
+                                            stroke="currentColor">
+                                            <circle cx="24" cy="38" r="13" stroke-width="1.6" />
+                                            <circle cx="40" cy="38" r="13" stroke-width="1.6" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M36 25l4-8 4 8h-8z" fill="currentColor" fill-opacity="0.15" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
+                                                d="M35 17h10M40 12v5" />
+                                        </svg>
+                                    </div>
+                                    <div class="program-text-col">
+                                        <h3 class="program-event-title" data-i18n="p2_title">Vow Ceremony</h3>
+                                        <span class="program-event-time" data-i18n="p2_time">11:30 AM</span>
+                                        <p class="program-event-desc" data-i18n="p2_desc">A beautiful celebration of
+                                            love, faith &amp; commitment</p>
+                                    </div>
+                                </div>
+
+                                <!-- Item 3: Grand Farewell -->
+                                <div class="program-item">
+                                    <div class="program-icon-col">
+                                        <svg class="program-svg-icon" viewBox="0 0 64 64" fill="none"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M32 52V30M24 48l16-16M40 48L24 32" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+                                                d="M32 20c-2-2.5-5-2.5-6 0-1.2 2.5 6 7 6 7s7.2-4.5 6-7c-1-2.5-4-2.5-6 0z"
+                                                fill="currentColor" fill-opacity="0.2" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
+                                                d="M16 22c-1.2-1.5-3-1.5-3.5 0-.7 1.5 3.5 4 3.5 4s4.2-2.5 3.5-4c-.5-1.5-2.3-1.5-3.5 0z"
+                                                fill="currentColor" fill-opacity="0.2" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
+                                                d="M48 22c-1.2-1.5-3-1.5-3.5 0-.7 1.5 3.5 4 3.5 4s4.2-2.5 3.5-4c-.5-1.5-2.3-1.5-3.5 0z"
+                                                fill="currentColor" fill-opacity="0.2" />
+                                            <circle cx="32" cy="8" r="1.5" fill="currentColor" />
+                                            <circle cx="12" cy="34" r="1.5" fill="currentColor" />
+                                            <circle cx="52" cy="34" r="1.5" fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                    <div class="program-text-col">
+                                        <h3 class="program-event-title" data-i18n="p3_title">Grand Farewell</h3>
+                                        <span class="program-event-time" data-i18n="p3_time">1:30 PM</span>
+                                        <p class="program-event-desc" data-i18n="p3_desc">As our beautiful celebration
+                                            comes to a joyful close</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── BOTTOM DARK SAGE PANEL: VENUE & SKETCH ── -->
+                    <div class="program-bottom-panel">
+                        <h2 class="program-venue-title" data-i18n="program_venue_title">Event Location</h2>
+                        <p class="program-venue-desc" data-i18n="program_venue_desc">
+                            Our wedding ceremony will be held at:<br>
+                            <strong>International Evangelical Church</strong><br>
+                            Addis Ababa, Ethiopia
+                        </p>
+
+                        <a href="#location-journey" class="program-route-btn" data-i18n="program_route_btn">GET
+                            DIRECTIONS</a>
+
+                        <!-- Hand-drawn Venue Sketch Vector -->
+                        <div class="program-venue-sketch-wrap">
+                            <img src="weddingplace.svg" class="program-venue-sketch-img" alt="Wedding Location Sketch">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ── GOLD DIVIDER ───────────────────────── -->
+            <div class="gold-rule"><span></span><svg viewBox="0 0 32 32">
+                    <circle cx="16" cy="16" r="5" fill="#BF953F" />
+                </svg><span></span></div>
+
+
+            <!-- ── LOCATION JOURNEY ──────────────────── -->
+            <div class="location-journey-section" id="location-journey">
+                <div class="journey-header">
+                    <h2 class="journey-main-title" data-i18n="couple_names">Nahom &amp; Meklit</h2>
+                    <p class="journey-sub-title" data-i18n="journey_sub_title">Our Day Journey</p>
+                    <p class="journey-schedule-label" data-i18n="journey_schedule_label">OCTOBER 18, 2026 &nbsp;PROGRAM
+                        SCHEDULE</p>
+                </div>
+
+                <div class="journey-track-wrap" id="journey-track-wrap">
+
+                    <!-- S-Curve SVG spine running through the center -->
+                    <div class="journey-svg-wrap">
+                        <svg class="journey-spine-svg" id="journey-path-svg" viewBox="0 0 141.045 1004.32"
+                            preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background path -->
+                            <path class="journey-bg-path"
+                                d="M58.0426 2.00616C58.0426 2.00616 90.4282 26.0695 105.543 46.5062C174.46 139.692 -3.43321 212.391 10.0426 327.506C22.0252 429.866 139.102 454.949 138.543 558.006C137.972 663.026 -0.279206 685.023 2.54261 790.006C5.1322 886.35 128.043 1002.51 128.043 1002.51"
+                                stroke="#6E7E63" stroke-width="20" stroke-linecap="round" />
+                            <!-- Animated progress stroke path -->
+                            <path id="journey-track" class="journey-animated-path"
+                                d="M58.0426 2.00616C58.0426 2.00616 90.4282 26.0695 105.543 46.5062C174.46 139.692 -3.43321 212.391 10.0426 327.506C22.0252 429.866 139.102 454.949 138.543 558.006C137.972 663.026 -0.279206 685.023 2.54261 790.006C5.1322 886.35 128.043 1002.51 128.043 1002.51"
+                                stroke="#6E7E63" stroke-width="20" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- ── STOP 1: HIS HOUSE (Image first, Text second) ── -->
+                    <div class="j-row" data-stop="0">
+                        <div class="j-media-col">
+                            <div class="j-img-wrapper">
+                                <img src="journey_his_house.png" alt="His House Illustration" class="j-img">
+                            </div>
+                        </div>
+                        <div class="j-text-col">
+                            <div class="j-card">
+                                <h3 class="stop-title" data-i18n="j1_title">HIS HOUSE</h3>
+                                <span class="stop-time" data-i18n="j1_time">8:00 AM</span>
+                                <p class="stop-desc" data-i18n="j1_desc">The groom prepares to begin</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── STOP 2: HER HOUSE (Text on Left, Image on Right) ── -->
+                    <div class="j-row reverse" data-stop="1">
+                        <div class="j-media-col">
+                            <div class="j-img-wrapper">
+                                <img src="journey_her_house.png" alt="Her House Illustration" class="j-img">
+                            </div>
+                        </div>
+                        <div class="j-text-col">
+                            <div class="j-card">
+                                <h3 class="stop-title" data-i18n="j2_title">HER HOUSE</h3>
+                                <span class="stop-time" data-i18n="j2_time">9:00 AM</span>
+                                <p class="stop-desc" data-i18n="j2_desc">The bride gets ready to say “I do.”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── STOP 3: CHURCH CEREMONY (Image first, Text second) ── -->
+                    <div class="j-row" data-stop="2">
+                        <div class="j-media-col">
+                            <div class="j-img-wrapper">
+                                <img src="journey_church.png" alt="Church Ceremony Illustration" class="j-img">
+                            </div>
+                        </div>
+                        <div class="j-text-col">
+                            <div class="j-card">
+                                <h3 class="stop-title" data-i18n="j3_title">CHURCH CEREMONY</h3>
+                                <span class="stop-time" data-i18n="j3_time">11:00 AM</span>
+                                <p class="stop-desc" data-i18n="j3_desc">Together with our families and loved ones</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── STOP 4: GARDEN PHOTOSHOOT (Text on Left, Image on Right) ── -->
+                    <div class="j-row reverse" data-stop="3">
+                        <div class="j-media-col">
+                            <div class="j-img-wrapper">
+                                <img src="journey_gazebo.png" alt="Garden Photoshoot Illustration" class="j-img">
+                            </div>
+                        </div>
+                        <div class="j-text-col">
+                            <div class="j-card">
+                                <h3 class="stop-title" data-i18n="j4_title">GARDEN PHOTOSHOOT</h3>
+                                <span class="stop-time" data-i18n="j4_time">2:30 PM</span>
+                                <p class="stop-desc" data-i18n="j4_desc">After the ceremony, we capture beautiful
+                                    memories</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── STOP 5: DINNER & CELEBRATION (Image first, Text second) ── -->
+                    <div class="j-row" data-stop="4">
+                        <div class="j-media-col">
+                            <div class="j-img-wrapper">
+                                <img src="journey_gate.png" alt="Dinner & Celebration Illustration" class="j-img">
+                            </div>
+                        </div>
+                        <div class="j-text-col">
+                            <div class="j-card">
+                                <h3 class="stop-title" data-i18n="j5_title">DINNER &amp; CELEBRATION</h3>
+                                <span class="stop-time" data-i18n="j5_time">5:30 PM</span>
+                                <p class="stop-desc" data-i18n="j5_desc">Join us as we gather for an evening celebration
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ── GOLD DIVIDER ───────────────────────── -->
+            <div class="gold-rule"><span></span><svg viewBox="0 0 32 32">
+                    <circle cx="16" cy="16" r="5" fill="#BF953F" />
+                </svg><span></span></div>
+
+            <!-- ── VENUE ──────────────────────────────── -->
+            <div class="inv-block">
+                <h2 class="block-title sage-text" data-i18n="venue_title">The Venue</h2>
+                <h3 class="venue-name" data-i18n="venue_name">International Evangelical Church</h3>
+                <p class="venue-address" data-i18n="venue_address">Addis Ababa, Ethiopia</p>
+                <div class="map-container">
+                    <iframe class="map-iframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.7250870408193!2d38.73601457546595!3d8.997424591062659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b842a49cee937%3A0xf179d6125f5e3a09!2sInternational%20Evangelical%20Church!5e0!3m2!1sen!2set!4v1785494109897!5m2!1sen!2set"
+                        title="International Evangelical Church Map" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+
+            <!-- ── GOLD DIVIDER ───────────────────────── -->
+            <div class="gold-rule"><span></span><svg viewBox="0 0 32 32">
+                    <circle cx="16" cy="16" r="5" fill="#BF953F" />
+                </svg><span></span></div>
+
+            <!-- ── DRESS CODE ─────────────────────────── -->
+            <div class="inv-block">
+                <h2 class="block-title sage-text" data-i18n="dresscode_title">Dress Code</h2>
+                <p class="dress-code-instructions" data-i18n="dresscode_desc">We kindly request <strong>Formal / Black
+                        Tie Elegant</strong> attire.
+                    Please complement our palette:</p>
+                <div class="color-palette">
+                    <div class="palette-swatch-wrapper">
+                        <div class="palette-swatch" style="background:#FFFFFF; border: 2px solid #ccc;"></div>
+                        <span class="color-name" data-i18n="color_white">White</span>
+                    </div>
+                    <div class="palette-swatch-wrapper">
+                        <div class="palette-swatch" style="background:#8B9E7E;"></div>
+                        <span class="color-name" data-i18n="color_sage">Sage Green</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── GOLD DIVIDER ───────────────────────── -->
+            <div class="gold-rule"><span></span><svg viewBox="0 0 32 32">
+                    <circle cx="16" cy="16" r="5" fill="#BF953F" />
+                </svg><span></span></div>
+
+            <!-- ── RSVP ───────────────────────────────── -->
+            <div class="inv-block" id="rsvp-block">
+                <h2 class="block-title sage-text" data-i18n="rsvp_title">Kindly RSVP</h2>
+                <p class="rsvp-subtitle" data-i18n="rsvp_subtitle">Please respond by September 18, 2026</p>
+                <div class="rsvp-form-container">
+                    <form id="rsvp-form" onsubmit="handleRSVPSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" id="rsvp-name" class="rsvp-input" placeholder=" " required>
+                            <label for="rsvp-name" class="form-label" data-i18n="label_fullname">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="rsvp-email" class="rsvp-input" placeholder=" " required>
+                            <label for="rsvp-email" class="form-label" data-i18n="label_email">Email Address</label>
+                        </div>
+                        <div class="attendance-group">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="attending" checked required>
+                                <span class="radio-custom"></span><span data-i18n="radio_accepts">Joyfully
+                                    Accepts</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="declining" required>
+                                <span class="radio-custom"></span><span data-i18n="radio_declines">Regretfully
+                                    Declines</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <select id="rsvp-guests" class="rsvp-input" style="padding-left:5px;">
+                                <option value="1" data-i18n="option_1guest">1 Guest</option>
+                                <option value="2" data-i18n="option_2guests">2 Guests (Maximum)</option>
+                            </select>
+                            <label for="rsvp-guests" class="form-label"
+                                style="top:-12px;font-size:.95rem;color:var(--gold-dark);"
+                                data-i18n="label_guests">Number of Guests</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="rsvp-message" class="rsvp-input" placeholder=" ">
+                            <label for="rsvp-message" class="form-label" data-i18n="label_wishes">Wishes / Dietary
+                                Notes</label>
+                        </div>
+                        <button type="submit" class="rsvp-submit-btn sage-gradient-bg" data-i18n="rsvp_submit">Send
+                            Response</button>
+                    </form>
+                </div>
+                <div class="rsvp-success-overlay" id="rsvp-success-overlay">
+                    <svg class="success-icon" viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <h3 class="success-title" data-i18n="rsvp_success_title">Thank You!</h3>
+                    <p class="success-message" id="success-message">Your response has been saved. We can't wait to
+                        celebrate with you!</p>
+                </div>
+            </div>
+
+            <!-- ── THANK YOU CARDS ─────────────────────── -->
+            <div class="inv-block" id="thankyou-block">
+                <h2 class="block-title sage-text" data-i18n="thankyou_title">Thank You Card</h2>
+                <p class="thankyou-subtitle" data-i18n="thankyou_subtitle">A small token of our gratitude — print or
+                    share with love</p>
+
+                <!-- Stacked front / back card -->
+                <div class="ty-stack-scene" id="ty-stack-scene">
+                    <!-- Back card (Card 2 — rotated behind) -->
+                    <img src="ThankyouCard2.jpg" alt="Thank You Card – Back" class="ty-stack-card ty-stack-back"
+                        id="tycard-img-2">
+                    <!-- Front card (Card 1 — on top) -->
+                    <img src="ThankyouCard1.jpg" alt="Thank You Card – Front" class="ty-stack-card ty-stack-front"
+                        id="tycard-img-1">
+                </div>
+
+                <!-- Single download button -->
+                <button class="ty-download-btn" id="ty-download-all" onclick="downloadThankyouCards()"
+                    data-i18n="thankyou_btn">
+                    Download Thank You Card
+                </button>
+            </div>
+
+            <!-- ── CLOSING ─────────────────────────────── -->
+            <div class="gold-rule"><span></span><svg viewBox="0 0 32 32">
+                    <circle cx="16" cy="16" r="5" fill="#BF953F" />
+                </svg><span></span></div>
+            <footer class="closing-message">
+                <h3 class="closing-text calligraphy" data-i18n="closing_love">With Love,</h3>
+                <h2 class="closing-text calligraphy sage-text" data-i18n="couple_names">Nahom &amp; Meklit</h2>
+                <p class="closing-subtext" data-i18n="closing_address">Addis Ababa · Ethiopia</p>
+            </footer>
+
+        </div><!-- /invitation-page -->
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
