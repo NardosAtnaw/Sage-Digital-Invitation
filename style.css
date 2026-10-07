@@ -313,7 +313,7 @@ body.lang-am .closing-subtext {
 
 .envelope-title {
     font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 9vw, 7.5rem);
+    font-size: clamp(2.4rem, 6.5vw, 5.2rem);
     font-weight: 700;
     letter-spacing: 0.04em;
     line-height: 1.1;
@@ -322,10 +322,10 @@ body.lang-am .closing-subtext {
 
 .static-envelope-container {
     position: relative;
-    width: 200%;
-    max-width: 1040px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 88%;
+    max-width: 440px;
+    left: auto;
+    transform: none;
     margin: 0 auto;
     text-align: center;
 }
@@ -335,10 +335,9 @@ body.lang-am .closing-subtext {
     height: auto;
     display: block;
     margin: 0 auto;
-    margin-top: -70px;
-    margin-left: -15px;
+    margin-top: -30px;
     object-fit: contain;
-    filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.18));
+    filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.16));
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
@@ -545,8 +544,8 @@ body.lang-am .closing-subtext {
     /* Aligns exactly at the 55% flap tip */
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 175px;
-    height: 175px;
+    width: 135px;
+    height: 135px;
     z-index: 10;
     border-radius: 50%;
     overflow: hidden;
@@ -588,27 +587,29 @@ body.lang-am .closing-subtext {
     }
 
     .envelope-title {
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
 
     .envelope-sub {
-        font-size: 1.0rem;
+        font-size: 0.95rem;
         letter-spacing: 3px;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
     }
 
     .static-envelope-container {
-        width: 100vw;
-        max-width: 100vw;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 85vw;
+        max-width: 360px;
+        left: auto;
+        transform: none;
+        margin: 20px auto 10px;
     }
 
     .static-envelope-img {
-        width: 100vw;
+        width: 100%;
         height: auto;
-        min-height: 260px;
-        object-fit: cover;
+        min-height: auto;
+        max-height: 280px;
+        object-fit: contain;
     }
 
     .flower-top-left {
@@ -624,8 +625,8 @@ body.lang-am .closing-subtext {
     }
 
     #wax-seal {
-        width: min(525px, 45vmin);
-        height: min(525px, 45vmin);
+        width: min(130px, 32vmin);
+        height: min(130px, 32vmin);
     }
 }
 
@@ -648,7 +649,7 @@ body.lang-am .closing-subtext {
     width: 100%;
     max-width: 720px;
     margin: 0 auto;
-    padding: 60px 28px 100px;
+    padding: 80px 28px 140px;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
 }
@@ -664,7 +665,7 @@ body.lang-am .closing-subtext {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px 0 48px;
+    padding: 40px 0 80px;
 }
 
 .botanical-ornament {
@@ -873,7 +874,7 @@ body.lang-am .closing-subtext {
     align-items: center;
     gap: 14px;
     width: 100%;
-    margin: 52px 0;
+    margin: 90px 0;
 }
 
 .gold-rule span {
@@ -896,7 +897,7 @@ body.lang-am .closing-subtext {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 60px;
     width: 100%;
 }
 
@@ -1038,7 +1039,7 @@ body.lang-am .closing-subtext {
 /* ─── LOCATION JOURNEY SECTION ───────────────────────── */
 .location-journey-section {
     width: 100%;
-    margin: 40px auto;
+    margin: 80px auto;
 }
 
 .journey-header {
@@ -1602,8 +1603,8 @@ body.lang-am .closing-subtext {
     }
 
     #wax-seal {
-        width: min(525px, 45vmin);
-        height: min(525px, 45vmin);
+        width: min(130px, 32vmin);
+        height: min(130px, 32vmin);
     }
 
     .open-hint {
@@ -2542,6 +2543,24 @@ body.lang-am .closing-subtext {
     color: rgba(255, 255, 255, .45);
 }
 
+/* ─── FLOWER DIVIDER ─────────────────────────────────── */
+.flower-divider-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    opacity: 0.7;
+}
+
+.flower-divider-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    filter: sepia(0.3) hue-rotate(60deg) saturate(0.8) brightness(0.85);
+}
 
 /* ─── RESPONSIVE — mobile-first complete overrides ─── */
 
@@ -2555,10 +2574,10 @@ body.lang-am .closing-subtext {
         overflow-x: hidden;
     }
 
-    /* ── Wax seal (maximized on mobile) ── */
+    /* ── Wax seal (subtle, elegant sizing) ── */
     #wax-seal {
-        width: min(525px, 45vmin);
-        height: min(525px, 45vmin);
+        width: min(125px, 30vmin);
+        height: min(125px, 30vmin);
         top: 55%;
     }
 
@@ -2814,8 +2833,8 @@ body.lang-am .closing-subtext {
     }
 
     #wax-seal {
-        width: min(525px, 45vmin);
-        height: min(525px, 45vmin);
+        width: min(115px, 28vmin);
+        height: min(115px, 28vmin);
         top: 55%;
     }
 
@@ -2828,8 +2847,8 @@ body.lang-am .closing-subtext {
 @media (max-height: 500px) and (orientation: landscape) {
     #wax-seal {
         top: 55%;
-        width: min(525px, 45vmin);
-        height: min(525px, 45vmin);
+        width: min(105px, 26vmin);
+        height: min(105px, 26vmin);
     }
 
     .couple-names {
@@ -2873,23 +2892,23 @@ body.lang-am .closing-subtext {
     }
 
     #wax-seal {
-        width: min(525px, 45vmin);
-        height: min(525px, 45vmin);
+        width: 135px;
+        height: 135px;
         top: 55%;
     }
 }
 
 /* ── DECORATIVE ENVELOPE SECTION IN CONTENT ─────────── */
 .envelope-section {
-    padding: 60px 0;
+    padding: 40px 0;
     width: 100%;
 }
 
 .static-envelope-container {
     position: relative;
-    width: 90%;
-    max-width: 500px;
-    margin: 40px auto 20px;
+    width: 85%;
+    max-width: 420px;
+    margin: 25px auto 15px;
     z-index: 5;
 }
 
@@ -2906,7 +2925,9 @@ body.lang-am .closing-subtext {
     }
 
     .static-envelope-container {
-        margin: 30px auto 10px;
+        width: 85vw;
+        max-width: 340px;
+        margin: 20px auto 10px;
     }
 }
 
